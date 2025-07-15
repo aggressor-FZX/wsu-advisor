@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Image from "next/image";
+import logo from "../logo.webp"; // Adjust path if needed
 
 export default function Home() {
   const [question, setQuestion] = useState("");
@@ -26,6 +28,13 @@ export default function Home() {
 
    return (
     <main style={{ maxWidth: 600, margin: "2rem auto", padding: "0 1rem" }}>
+     <Image
+        src={logo}
+        alt="WSU Advisor Logo"
+        style={{ display: "block", margin: "0 auto 1rem", maxWidth: 120 }}
+        width={120}
+        height={120}
+      />
       <h1>WSU Course Advisor</h1>
       <p>Ask me for advice on choosing classes at WSU:</p>
       <input
@@ -48,7 +57,7 @@ export default function Home() {
             whiteSpace: "pre-wrap",
             marginTop: "1rem",
 
-            // ← here are the new styles
+           
             background: "#f5f5f5",
             color: "#222",             // dark text
             border: "1px solid #ccc",   // subtle border
