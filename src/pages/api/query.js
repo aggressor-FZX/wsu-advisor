@@ -49,7 +49,7 @@ const namespace = index.namespace("default");
 const search = await namespace.searchRecords({
   query: {
     inputs: { text: question },
-    topK: 13
+    topK: 18
   },
   includeMetadata: true
 });
